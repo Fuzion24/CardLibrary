@@ -11,7 +11,7 @@ version := "0.1"
 versionCode := 0
 
 // Set the version of Scala to use
-scalaVersion := "2.10.1"
+scalaVersion := "2.10.2"
 
 // Set the Android platform name
 platformName := "android-16"

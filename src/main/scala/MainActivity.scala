@@ -1,7 +1,7 @@
 package com.card.library
 
-import _root_.android.app.Activity
-import _root_.android.os.Bundle
+import android.app.Activity
+import android.os.Bundle
 
 class MainActivity extends Activity with TypedActivity {
   override def onCreate(bundle: Bundle) {
