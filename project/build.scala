@@ -17,8 +17,7 @@ object AndroidBuild extends Build {
       platformName := "android-16",
   	  libraryDependencies ++= Seq("org.scaloid" %% "scaloid" % "2.1-8",
   	  							  "org.scalatest" %% "scalatest" % "1.9.1" % "test"),
-	  javacOptions ++= Seq("-encoding", "UTF-8", "-source", "1.6", "-target", "1.6"),
+	    javacOptions ++= Seq("-encoding", "UTF-8", "-source", "1.6", "-target", "1.6"),
       keyalias := "change-me"
     )
-
 }
