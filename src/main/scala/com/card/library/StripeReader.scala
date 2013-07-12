@@ -27,11 +27,11 @@ class StripeReader { self:StripeDecoder =>
     decodeBits(decodeSwipe(readSwipe))
   }
 
-  //@tailrec
-  def waitForSwipe:Unit = {
+  @tailrec
+  private def waitForSwipe:Unit = {
     val readCnt = recorder.read(buffer,0, minBufferSize)
-    val startReading = buffer.slice(0,readCnt).exists(isValidSample)
-    if(!startReading) waitForSwipe
+    val startReading = buffer.slice(0,readCnt).exists(s => isValidSample(s))
+    if(startReading) return else waitForSwipe
   }
 
   def readSwipe:Array[Short] =
