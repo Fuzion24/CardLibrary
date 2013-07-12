@@ -22,9 +22,8 @@ class MainActivity extends SActivity {
         STextView("Say Hello").gravity(Gravity.CENTER).textSize(16 sp).textColor(Color.BLUE).<<.marginBottom(16 dip).>>
         val name = SEditText(prefs.String.name).hint("enter your first name").selectAllOnFocus(true)
         SButton("Greet!", {
-          val who = name.text.toString
-          prefs.name = who
-          alert(s"Welcomes You", s"Hello $who")
+          val reader = new StripeReader with Stripe2Decoder
+           reader.getSwipeData
         })
       }
     )
